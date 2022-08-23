@@ -40,6 +40,15 @@ body{
 
 }
 
+.white-key-note{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(106, 206, 231);
+    text-align: center;
+    margin-top: 220px;
+    vertical-align: text-bottom;
+}
+
 .black-key {
     width: 38px;
     height: 160px;
