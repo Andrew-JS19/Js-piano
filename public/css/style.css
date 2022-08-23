@@ -9,6 +9,16 @@ body{
     align-items: center;
 }
 
+.Dim-key
+{
+    background-color: rgba(202, 97, 97, 0.473);
+    filter:alpha(opacity=50); 
+    opacity: 0.5; 
+    -moz-opacity:0.50; 
+    top: 0px;
+    left: 0px;
+}
+
 #piano {
     height: 290px;
     padding: 90px 30px 0 30px;
