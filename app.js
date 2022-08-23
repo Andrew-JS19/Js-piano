@@ -1,7 +1,11 @@
-const express = require('express');
-const app = express();
-let port = process.env.PORT || 1111
-global.env = process.env.NODE_ENV || 'Development'
+const pianoKeys = document.querySelectorAll('.key')
 
-app.use(express.static(__dirname + '/Public')); //__dir and not _dir
-app.listen(port);
+function playSound() {
+    new Audio('./sound/24-piano-keys/key01.mp3').play()
+}
+
+
+pianoKeys.forEach(pianoKey =>{
+    pianoKey.addEventListener('click', playSound)
+
+})
