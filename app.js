@@ -1,11 +1,6 @@
-const pianoKeys = document.querySelectorAll('.key')
+const express = require('express');
+const app = express();
 
-function playSound() {
-    new Audio('24-piano-keys\key02.mp3').play()
-}
+let port = process.env.PORT || 1111
 
 
-pianoKeys.forEach(pianoKey =>{
-    pianoKey.addEventListener('click', playSound)
-
-})
