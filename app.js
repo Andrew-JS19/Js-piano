@@ -1,7 +1,7 @@
 const pianoKeys = document.querySelectorAll('.key')
 
 function playSound() {
-    new Audio('24-piano-keys\key02.mp3').play()
+    new Audio('./24-piano-keys/key02.mp3').play()
 }
 
 
