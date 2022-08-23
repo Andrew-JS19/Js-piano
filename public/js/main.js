@@ -1,11 +1,19 @@
-const pianoKeys = document.querySelectorAll('.key')
+const blackPianoKeys = document.querySelectorAll('.bk');
+const whitePianoKeys = document.querySelectorAll('.wk');
 
-function playSound() {
-    new Audio('./24-piano-keys/key02.mp3').play()
+function playSound(Keyname,clr) {
+    console.log(`Keyname is ${Keyname}`)
+    filename = `../sound/${clr}keys/key${Keyname}.mp3`
+
+
+    new Audio(filename).play();
 }
 
 
-pianoKeys.forEach(pianoKey =>{
-    pianoKey.addEventListener('click', playSound)
+blackPianoKeys.forEach(pianoKey =>{
+    pianoKey.addEventListener('click', playSound.bind(null,pianoKey.getAttribute('value'),'black'));
+})
 
+whitePianoKeys.forEach(pianoKey =>{
+    pianoKey.addEventListener('click', playSound.bind(null,pianoKey.getAttribute('value'),'white'));
 })
